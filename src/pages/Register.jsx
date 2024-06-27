@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import '../App.css';
 import { Link, useNavigate } from 'react-router-dom';
+import Login from './Login';
 
 export default function Register() {
-  const [email, setEmail] = useState('');
+  const [Login, setLogin] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ export default function Register() {
       return;
     }
     const userData = {
-      email,
+      Login,
       password,
     };
     localStorage.setItem('user', JSON.stringify(userData));
@@ -36,10 +37,10 @@ export default function Register() {
               <div className="wave-group">
                 <input
                   required
-                  type="email"
+                  type="Login"
                   className="input text-white"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={Login}
+                  onChange={(e) => setLogin(e.target.value)}
                 />
                 <span className="bar"></span>
                 <label className="label" style={{ opacity: "0.5" }}>

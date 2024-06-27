@@ -139,7 +139,7 @@ export default function MySwiper() {
                         borderRadius: '8px',
                         boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
                         overflow: 'hidden',
-                        display: value === searchTerm ? 'block' : 'none' // Conditional display based on value
+                        display: value === searchTerm ? 'block' : 'none'
                     }}
                 >
                     {filteredMovies.map(movie => (
